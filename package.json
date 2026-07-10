@@ -1,0 +1,28 @@
+{ "name": "uictl",
+  "version": "0.0.0",
+  "description": "PowerShell functions to interact with the Windows UI.",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/pwsh-pmb/uictl/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwsh-pmb/uictl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pwsh-pmb/uictl/issues"
+  },
+  "contributors": [],
+
+  "private": true, "license": "ISC",
+
+  "directories": { "test": "test" },
+
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+
+
+  "engines": { "npm": ">=7.0.0", "pwsh": ">=5.1.0" }
+}
