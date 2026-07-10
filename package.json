@@ -1,5 +1,5 @@
 { "name": "uictl",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "PowerShell functions to interact with the Windows UI.",
   "keywords": [],
 
@@ -16,6 +16,7 @@
 
   "private": true, "license": "ISC",
 
+  "bin": "uictl.cmd",
   "directories": { "test": "test" },
 
   "dependencies": {
