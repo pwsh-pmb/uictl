@@ -11,6 +11,26 @@ function ForEach-ObjectAsJson {
 }
 
 
+function Unpack-Array {
+  $input | ForEach-Object { $_ }
+}
+
+
+function Split-Chunks {
+  [CmdletBinding()]
+  param(
+    [ValidateRange(1, [int]::MaxValue)][int]$ChunkLen,
+    [Parameter(ValueFromPipeline = $true)]$x
+  )
+  begin { $c = New-Object System.Collections.Generic.List[object] ($ChunkLen) }
+  process {
+    $c.Add($x)
+    if ($c.Count -ge $ChunkLen) { ,$c.ToArray(); $c.Clear() }
+  }
+  end { if ($c.Count) { ,$c.ToArray() } }
+}
+
+
 function Get-CartesianProduct($sets) {
   $n = $sets.Length
   if ($n -lt 1) { return @() }
